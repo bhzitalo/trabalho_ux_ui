@@ -14,7 +14,7 @@ Proposta: Um portal de apoio emocional voltado à prevenção do suicídio (Sete
 | Necessidades | Precisa de um ambiente digital limpo, com opção de síntese de voz (áudio) para ouvir os textos, botões para aumento do tamanho das letras e cores amigáveis de alto contraste. |
 | Frustrações | Sites poluídos, letras muito pequenas e ausência de leitores de voz integrados. |
 
-![MariaHelena](persona.jpg)
+![MariaHelena](persona.jpgluz)
 
 ## 3. Elaboração do Wireframe
 O wireframe estrutural define a distribuição dos elementos na página priorizando a hierarquia visual e pontos de foco de acessibilidade:

@@ -1,0 +1,360 @@
+:root {
+    --bg: #fffde7;
+    --surface: #ffffff;
+    --surface-soft: #fff8c9;
+    --primary: #fbc02d;
+    --primary-dark: #8a6200;
+    --text: #212121;
+    --text-soft: #4a4a4a;
+    --border: #d8c46b;
+    --focus: #005fcc;
+    --shadow: 0 8px 25px rgba(80, 65, 0, 0.12);
+    --font-size: 18px;
+    --radius: 18px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, "Segoe UI", sans-serif;
+    font-size: var(--font-size);
+    line-height: 1.6;
+}
+
+body.high-contrast {
+    --bg: #000000;
+    --surface: #111111;
+    --surface-soft: #1b1b1b;
+    --primary: #ffff00;
+    --primary-dark: #ffff00;
+    --text: #ffffff;
+    --text-soft: #ffffff;
+    --border: #ffff00;
+    --focus: #00ffff;
+    --shadow: none;
+}
+
+.container {
+    width: min(1120px, calc(100% - 32px));
+    margin-inline: auto;
+}
+
+.site-header {
+    background: var(--surface);
+    border-bottom: 3px solid var(--primary);
+}
+
+.header-content {
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 28px 0;
+}
+
+.eyebrow {
+    margin: 0 0 4px;
+    color: var(--primary-dark);
+    font-size: 0.78em;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+}
+
+.high-contrast .eyebrow {
+    color: var(--primary);
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+h2 {
+    margin: 0 0 12px;
+    font-size: clamp(1.65rem, 3vw, 2.4rem);
+}
+
+h3 {
+    margin: 8px 0 12px;
+    font-size: 1.35rem;
+}
+
+.subtitle {
+    margin: 8px 0 0;
+    color: var(--text-soft);
+}
+
+.accessibility-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+button,
+a {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.accessibility-tools button,
+.audio-button {
+    border: 2px solid var(--text);
+    background: var(--surface);
+    color: var(--text);
+    border-radius: 10px;
+    padding: 9px 13px;
+    font-weight: 700;
+}
+
+.accessibility-tools button:hover,
+.audio-button:hover {
+    background: var(--primary);
+    color: #000;
+}
+
+.hero {
+    padding: 48px 0 30px;
+}
+
+.hero-card {
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: clamp(28px, 5vw, 55px);
+    text-align: center;
+}
+
+.heart {
+    display: inline-grid;
+    place-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #000;
+    font-size: 2.2rem;
+}
+
+.hero-card p {
+    max-width: 760px;
+    margin: 0 auto 26px;
+    color: var(--text-soft);
+}
+
+.primary-button,
+.cvv-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 10px 22px;
+    border-radius: 10px;
+    background: var(--primary);
+    color: #000;
+    text-decoration: none;
+    font-weight: 800;
+    border: 2px solid var(--primary);
+}
+
+.primary-button:hover,
+.cvv-button:hover {
+    filter: brightness(0.92);
+}
+
+.messages-section {
+    padding: 34px 0 60px;
+}
+
+.section-heading {
+    max-width: 760px;
+    margin-bottom: 28px;
+}
+
+.section-heading > p:last-child {
+    color: var(--text-soft);
+}
+
+.message-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.message-card {
+    position: relative;
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    box-shadow: var(--shadow);
+}
+
+.message-card.featured {
+    grid-column: 1 / -1;
+    border-width: 3px;
+}
+
+.message-number {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 900;
+    color: var(--primary-dark);
+}
+
+.high-contrast .message-number {
+    color: var(--primary);
+}
+
+.verse {
+    margin: 0 0 4px;
+    font-size: 1.12em;
+    font-weight: 700;
+}
+
+.reference {
+    margin: 0 0 16px;
+    color: var(--primary-dark);
+    font-weight: 800;
+}
+
+.high-contrast .reference {
+    color: var(--primary);
+}
+
+.message-card > p:not(.verse):not(.reference) {
+    color: var(--text-soft);
+}
+
+.audio-button {
+    margin-top: 12px;
+}
+
+.support-section {
+    padding: 0 0 60px;
+}
+
+.support-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    background: var(--primary);
+    color: #000;
+    border-radius: var(--radius);
+    padding: clamp(24px, 5vw, 40px);
+    border: 3px solid #000;
+}
+
+.support-card .eyebrow,
+.support-card h2 {
+    color: #000;
+}
+
+.support-card p {
+    max-width: 720px;
+}
+
+.support-note {
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.cvv-button {
+    flex: 0 0 auto;
+    background: #000;
+    color: #fff;
+    border-color: #000;
+    min-width: 145px;
+}
+
+.high-contrast .support-card {
+    background: var(--primary);
+    color: #000;
+}
+
+.high-contrast .support-card .eyebrow,
+.high-contrast .support-card h2 {
+    color: #000;
+}
+
+.site-footer {
+    background: var(--surface);
+    border-top: 2px solid var(--border);
+}
+
+.footer-content {
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: var(--text-soft);
+    font-size: 0.9em;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+:focus-visible {
+    outline: 4px solid var(--focus);
+    outline-offset: 4px;
+}
+
+.sr-status {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+    .header-content,
+    .support-card,
+    .footer-content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .accessibility-tools {
+        justify-content: flex-start;
+    }
+
+    .message-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .message-card.featured {
+        grid-column: auto;
+    }
+
+    .cvv-button {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
